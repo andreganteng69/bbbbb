@@ -14,7 +14,7 @@
           }).filter(word => {
             var clone = chars.join("")
             for (var char of word.split("")) {
-              if (clone.match(char)) clone = clone.replace(char)
+              if (clone.match(char)) clone = clone.replace(char, "")
               else return false
             }
             return true
