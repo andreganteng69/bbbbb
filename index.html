@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <input id="i"></input>
+    <button id="b" onclick="d()">cari</button>
+    <script>
+      var d = () => {}
+      fetch("/list.txt").then(r=>r.text()).then(list => {
+        const words = list.split("\n").filter(e=>e.length>=3)
+        console.log(words)
+      })
+    </script>
+  </body>
+</html>
