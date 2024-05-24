@@ -24,6 +24,7 @@
           for (var word of res) {
             const len = word.length
             if (!raw[len]) raw[len] = []
+            if (raw[len].includes(word)) continue;
             raw[len].push(word)
           }
           var proc = ""
