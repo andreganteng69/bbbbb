@@ -30,7 +30,7 @@
           for (var len of Object.keys(raw)) {
             proc = `${proc}\n\n${len} huruf:\n${raw[len].join(", ")}`
           }
-          document.getElementById("res").innerHTML = res.trim()
+          document.getElementById("res").innerHTML = proc.trim()
         }
       })
     </script>
