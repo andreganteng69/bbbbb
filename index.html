@@ -11,7 +11,7 @@
           const chars = document.getElementById("i").value.toLowerCase().split("")
           const res = words.map(w=>w.toLowerCase()).filter(word => {
             // p1
-            return word.length < chars.length && !!chars.find(char => word.match(char))
+            return word.length <= chars.length && !!chars.find(char => word.match(char))
           }).filter(word => {
             var clone = chars.join("")
             for (var char of word.split("")) {
