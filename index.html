@@ -2,6 +2,7 @@
   <body>
     <input id="i"></input>
     <button id="b" onclick="d()">cari</button>
+    <p id="res"></p>
     <script>
       var d = () => {}
       fetch("/list.txt").then(r=>r.text()).then(list => {
@@ -19,7 +20,7 @@
             }
             return true
           })
-          console.log(res)
+          document.getElementById("res").innerHTML = res.join(", ")
         }
       })
     </script>
