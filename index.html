@@ -20,7 +20,17 @@
             }
             return true
           })
-          document.getElementById("res").innerHTML = res.join(", ")
+          const raw = {}
+          for (var word of res) {
+            const len = word.length
+            if (!raw[len]) raw[len] = []
+            raw[len].push(word)
+          }
+          var proc = ""
+          for (var len of Object.keys(raw)) {
+            proc = `${proc}\n\n${len} huruf:\n${raw[len].join(", ")}`
+          }
+          document.getElementById("res").innerHTML = res.trim()
         }
       })
     </script>
